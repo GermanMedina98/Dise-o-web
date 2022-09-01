@@ -5,7 +5,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
-.grid-container{
+/* .grid-container{
     display: grid;
     grid-template-areas:
      "header"
@@ -14,7 +14,7 @@
      grid-template-rows: 150px 1000px 300px;
      grid-template-columns: 100% 500px 200px ;
      align-items: baseline;
-}
+} */
 /* Body */
 body{
     font-family: 'Roboto', sans-serif;
@@ -287,7 +287,7 @@ p{
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 896px) {
     /* Menu */
     .listas {
       flex-direction: column;
@@ -308,8 +308,6 @@ p{
       width: 10% ;
       height: 100px;
          
-    
-
     }
     .main {
       display: block;
@@ -319,8 +317,9 @@ p{
     }
 
     .box_footer{
-        width: 50%;
+        width: 100%;
     }
+    
 }
 
 

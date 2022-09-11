@@ -1,21 +1,21 @@
 footer{
     grid-area: footer;
-    background-color: #000000;
+    background-color: map-get($background-color, footerbackground-color );
     width: 100%;
     padding: 10px 10px;
    }
 
 .container__footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: map-get($displays , footerdisplay );
+    flex-wrap: map-get($displays , wrap );
+    justify-content: map-get($displays , space-between );
     max-width: 1200px;
-    margin: auto;
+    margin: map-get($margin , marginauto );
     margin-top: 0;
 }
 
 .box__footer{
-    display: flex;
+    display: map-get($displays , footerdisplay );
     flex-direction: column;
     padding: 05px;
 }
@@ -31,7 +31,7 @@ footer{
      
     h2{
         margin-bottom: 15px;
-        color: #ffffff;
+        color: map-get($color , primary );
         font-weight: 700;
     }
 }
@@ -41,7 +41,7 @@ footer{
     a{
         text-decoration: none;
         margin-top: 05px;
-        color: #7a7a7a;
+        color: map-get($color , secundary);
         font-weight: 600;
      }
 }
@@ -63,7 +63,7 @@ footer{
 
 .box__copyright{
     max-width: 1200px;
-    margin: auto;
+    margin: map-get($margin, marginauto);
     text-align: center;
     padding: 40px 50px;
 }
@@ -72,7 +72,7 @@ footer{
      
     p{
         margin: 10px 0px;
-        color: #bebdbd;
+        color: map-get($color , secundary );
      }
 
 }
@@ -82,7 +82,7 @@ footer{
     hr{
         border: none;
         height: 1px;
-        background-color: #7a7a7a;
+        background-color: map-get($color ,secundary );
     }
 
 }

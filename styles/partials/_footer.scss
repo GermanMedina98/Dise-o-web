@@ -1,6 +1,6 @@
 footer{
     grid-area: footer;
-    background-color: map-get($background-color, footerbackground-color );
+    background-color: map-get($color, terciary);
     width: 100%;
     padding: 10px 10px;
    }
@@ -50,21 +50,18 @@ footer{
     opacity: 0.8;
 }
 
-.box__footer{
-        
-        a{ 
-            
-            .fab{
-                font-size: 20px;
-            }
-
-        }        
+.box__footer{  
+    a{ 
+        .fab{
+            font-size: 20px;
+        }
+    }        
 }
 
 .box__copyright{
     max-width: 1200px;
     margin: map-get($margin, marginauto);
-    text-align: center;
+    text-align: map-get($displays, justifycenter);
     padding: 40px 50px;
 }
 

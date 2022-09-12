@@ -1,0 +1,7 @@
+@mixin nosotros($margintop, $marginleft, $marginbottom, $marginright){ /*mixin en main .nosotros*/
+    
+    margin-top: $margintop;
+    margin-left: $marginleft;
+    margin-bottom: $marginbottom ;
+    margin-right: $marginright ;
+}

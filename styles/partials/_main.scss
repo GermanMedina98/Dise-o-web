@@ -13,7 +13,7 @@
     grid-template-rows: 150px 100px 100px;
     column-gap: 10px;
     row-gap: 05px;
-    justify-items: center;
+    justify-items: map-get($displays , justifyitems);
     overflow: hidden;
 }
 .img{
@@ -26,10 +26,10 @@
     height: 330px;
 }
 .galeria{
-    margin: 01px rgb(0, 0, 0);
+    margin: 01px map-get($color , terciary);
 }
 .titulos{
-    display: flow-root;
+    display: map-get($displays , displayflowroot );
     margin: 50px 50px;
 
 }
@@ -39,61 +39,55 @@
 
 /*REgistrate y inicio*/
 .h1{
+    @extend %margin;
     font-size: 36px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+   
 }
 .h3{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+   @extend %margin;
 }
 .flex-container{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #000000;
+    display: map-get($displays , footerdisplay );
+    align-items: map-get($displays , justifyitems);
+    flex-wrap: map-get($displays, flexwrap);
+    justify-content: map-get($displays , justifycenter );
+    background-color: map-get($color, terciary );
     margin: 30px;
 }
 
 .form{
     min-width: 100px;
     flex: 01;
-    text-align: center;
+    text-align: map-get($displays , justifyitems );
     padding: 30px;
 }
 .form__input{
-    text-align: center;
+    text-align: map-get($displays , justifyitems );
     width: 100%;
     padding: 07px;
     margin: 06px 0;
     border: none;
-    border-bottom: 03px solid rgb(255, 255, 255);
+    border-bottom: 03px solid map-get($color , primary);
     background: transparent;
 }
 .form input[type="submit"]{
-    background-color: #ffffff;
+    background-color: map-get($color, primary );
     border-bottom: none;
     padding: 12px;
 }
 p{
-    text-align: center;
-    color: #070707;
+    text-align: map-get($displays , justifyitems );
+    color:map-get($color , terciary );
     margin: 30px;
 }
 /*quienes somos*/
 .nosotros{
+    @include nosotros( $margintop: 20px, $marginleft: 300px, $marginbottom: 50px, $marginright: 300px){
     width: 60%;
     height: 100%; 
-    margin-top: 20px;
-    margin-left: 300px;
-    margin-bottom: 50px ;
-    margin-right: 300px ;
-}
+    }
 
-@media screen and (max-width: 896px) {
+    @media screen and (max-width: 896px) {
     /* Menu */
     .listas {
       flex-direction: column;
@@ -101,10 +95,10 @@ p{
       left: 0;
       top: 0;
       width: 100%;
-      align-items: center;
-      background-color: #f5fdfd;
+      align-items: map-get($displays, justifyitems );
+      background-color: map-get($color , primary);
       height: 100%;
-      overflow-y: auto;
+      overflow-y: map-get($margin , marginauto);
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s;
@@ -120,5 +114,6 @@ p{
       border: none;
       background: none;
       cursor: pointer;
+    }
     }
 }    
